@@ -62,32 +62,61 @@ export function WhatsAppLanding() {
   }, []);
 
   return (
-    <main className="flex min-h-[100dvh] flex-col items-center justify-center bg-zinc-950 px-6 py-16 text-center">
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-        Pizza Bakana
-      </p>
-      <h1 className="mt-4 max-w-md text-balance text-3xl font-semibold text-white sm:text-4xl">
-        Pedir pelo WhatsApp
-      </h1>
-      <p className="mt-4 max-w-sm text-pretty text-zinc-400">
-        Toque no botão para abrir o WhatsApp com sua mensagem pronta. Se o app
-        não abrir, usamos o link oficial{" "}
-        <span className="text-zinc-300">wa.me</span> automaticamente.
-      </p>
-
-      <button
-        type="button"
-        onClick={openWhatsApp}
-        className="mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-10 py-5 text-base font-bold tracking-wide text-white shadow-[0_4px_24px_rgba(37,211,102,0.45)] transition hover:bg-[#20BD5A] hover:shadow-[0_6px_32px_rgba(37,211,102,0.55)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]"
+    <div className="flex min-h-[100dvh] flex-col bg-black">
+      <header
+        className="shrink-0 border-b border-emerald-950/50 bg-emerald-900 py-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
+        role="banner"
       >
-        <WhatsAppGlyph className="size-8 shrink-0" />
-        Conversar no WhatsApp
-      </button>
+        <p className="text-center text-xs font-bold uppercase tracking-[0.35em] text-orange-500 sm:text-sm">
+          A PARTIR DAS 18:00
+        </p>
+      </header>
 
-      <p className="mt-8 max-w-xs text-xs leading-relaxed text-zinc-600">
-        Em alguns apps (como o Instagram), o sistema pode pedir para abrir no
-        navegador ou no WhatsApp — escolha o WhatsApp para ir direto ao número.
-      </p>
-    </main>
+      <main
+        className="relative flex min-h-[100dvh] flex-col items-center justify-center bg-black bg-[url('/bg-pizzabakana.webp')] bg-cover bg-[50%_42%] bg-no-repeat px-6 py-16 text-center sm:bg-[50%_48%] md:bg-bottom"
+        aria-label="Pedir pelo WhatsApp"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/55 to-transparent to-[55%]"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/90 to-transparent"
+          aria-hidden
+        />
+
+        <div className="relative z-10 flex max-w-lg flex-col items-center">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-orange-500/90">
+            Pizza Bakana
+          </p>
+          <h1 className="mt-4 max-w-md text-balance text-3xl font-semibold text-white sm:text-4xl">
+            Pedir pelo WhatsApp
+          </h1>
+          <p className="mt-4 max-w-sm text-pretty text-gray-200">
+            Toque no botão para abrir o WhatsApp com sua mensagem pronta. Se o
+            app não abrir, usamos o link oficial{" "}
+            <span className="text-white underline decoration-white/30">
+              wa.me
+            </span>{" "}
+            automaticamente.
+          </p>
+
+          <button
+            type="button"
+            onClick={openWhatsApp}
+            className="mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-10 py-5 text-base font-bold tracking-wide text-white shadow-[0_4px_24px_rgba(37,211,102,0.45)] transition hover:bg-[#20BD5A] hover:shadow-[0_6px_32px_rgba(37,211,102,0.55)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]"
+          >
+            <WhatsAppGlyph className="size-8 shrink-0" />
+            Conversar no WhatsApp
+          </button>
+
+          <p className="mt-8 max-w-xs text-xs leading-relaxed text-gray-400">
+            Em alguns apps (como o Instagram), o sistema pode pedir para abrir
+            no navegador ou no WhatsApp — escolha o WhatsApp para ir direto ao
+            número.
+          </p>
+        </div>
+      </main>
+    </div>
   );
 }
