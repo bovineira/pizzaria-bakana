@@ -73,7 +73,7 @@ export function WhatsAppLanding() {
       </header>
 
       <main
-        className="relative flex min-h-[100dvh] flex-col items-center justify-center bg-black bg-[url('/bg-pizzabakana.webp')] bg-cover bg-[50%_42%] bg-no-repeat px-6 py-16 text-center sm:bg-[50%_48%] md:bg-bottom"
+        className="relative flex min-h-[100dvh] flex-col items-center justify-start bg-black bg-[url('/bg-pizzabakana.webp')] bg-cover bg-[50%_42%] bg-no-repeat px-6 pb-16 pt-4 text-center sm:pt-5 sm:pb-20 md:justify-center md:bg-bottom md:py-16 md:pb-20"
         aria-label="Pedir pelo WhatsApp"
       >
         <div
