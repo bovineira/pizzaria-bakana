@@ -93,8 +93,8 @@ export function LandingHero({
             <motion.a
               href={ctaHref}
               onClick={onCtaClick}
-              target={onCtaClick ? undefined : ctaTarget}
-              rel={onCtaClick ? undefined : ctaRel}
+              target={ctaTarget}
+              rel={ctaRel}
               className="relative inline-flex min-h-[3.5rem] items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-b from-orange-500 to-orange-600 px-10 py-5 text-base font-bold uppercase tracking-wide text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset] sm:min-h-[4rem] sm:gap-3.5 sm:px-14 sm:py-6 sm:text-lg md:px-16 md:py-6 md:text-xl"
               style={{
                 boxShadow:
