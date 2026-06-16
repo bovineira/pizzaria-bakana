@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 
 const pulseTransition = {
   duration: 2.2,
@@ -16,6 +17,8 @@ const shimmerTransition = {
 };
 
 export type LandingHeroProps = {
+  headline?: ReactNode;
+  subheadline?: ReactNode;
   ctaLabel: string;
   ctaHref: string;
   ctaIcon: LucideIcon;
@@ -26,6 +29,12 @@ export type LandingHeroProps = {
 };
 
 export function LandingHero({
+  headline = (
+    <>
+      A <span className="text-orange-500">MELHOR</span> DA CIDADE
+    </>
+  ),
+  subheadline = "Clique abaixo agora para acessar o nosso cardápio",
   ctaLabel,
   ctaHref,
   ctaIcon: CtaIcon,
@@ -64,7 +73,7 @@ export function LandingHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            A <span className="text-orange-500">MELHOR</span> DA CIDADE
+            {headline}
           </motion.h1>
 
           <motion.h2
@@ -77,7 +86,7 @@ export function LandingHero({
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            Clique abaixo agora para acessar o nosso cardápio
+            {subheadline}
           </motion.h2>
 
           <motion.div
